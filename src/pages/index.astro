@@ -1,11 +1,63 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import InstagramIcon from '../components/icons/Instagram.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import BriefcaseIcon from '../components/icons/Briefcase.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Portfolio de Iván Stebler"
+	description="Software Developer Jr. and Civil Engineer from Santa Fe, Argentina."
+>
+	<main>
+
+		<SectionContainer class="pt-44 pb-22">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, soy Iván <a 
+					href="https://www.linkedin.com/in/ivanstebler/" 
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex justify-center items-center">
+					<Badge>Disponible</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl opacity-80 text-wrap">
+				<span>+6 meses de experiencia. </span><span class="text-green-400/80">Desarrollador Jr. de Software e Ingeniero civil.</span>
+				<span class="text-green-300/90">De Santa Fe, Argentina ⚽. </span><span class="opacity-70">Investigando y siendo curioso la mayor parte del tiempo.</span>
+			</h2>
+
+			<nav class="flex gap-x-4 mt-6">
+				<SocialPill href="https://www.linkedin.com/in/ivanstebler/">
+					<LinkedInIcon class="size-4" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/ivansteb/">
+					<GitHubIcon class="size-4" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://www.instagram.com/ivansteb8/">
+					<InstagramIcon class="size-4" />
+					Instagram
+				</SocialPill>
+				<SocialPill href="mailto:steblerivan@gmail.com">
+					<MailIcon class="size-4" />
+					steblerivan@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-4 items-center">
+				<BriefcaseIcon class="size-6" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
 </Layout>
