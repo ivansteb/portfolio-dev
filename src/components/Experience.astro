@@ -3,25 +3,34 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
     {
-        date: "February 2022",
-        title: "Application UI code in Tailwind CSS",
-        description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+        date: "Noviembre 2024 - actualidad",
+        company: "Diveria S.R.L.",
+        title: "Desarrollador de Software Jr.",
+        description: "Desarrollo, mantenimiento y soporte de aplicación de e-commerce (SaaS) en React y C# .NET, empleando IIS, SQL Server y GitLab CI/CD. Implementación de nuevas funcionalidades, corrección de bugs, refactorización y documentación de código en Confluence.",
         link: "#",
     },
     {
-        date: "March 2022",
+        date: "Agosto 2021 - Diciembre 2023",
+        company: "COEMYC S.A.",
         title: "Marketing UI design in Figma",
         description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
     },
     {
-        date: "April 2022",
+        date: "Septiembre 2019 - Marzo 2021",
+        company: "ENERFE SAPEM",
         title: "E-Commerce UI code in Tailwind CSS",
         description: "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+    },
+    {
+        date: "Septiembre 2017 - Enero 2018",
+        company: "ObraTec S.A.",
+        title: "E-Commerce UI design in Figma",
+        description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
     }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-2.5">
     {
         EXPERIENCE.map(experience => (
             <li class="mb-10 ms-4">

@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import './src/styles/global.css'
 import '@fontsource-variable/onest'
@@ -28,6 +29,7 @@ const { title, description } = Astro.props
 		</div>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -38,6 +40,7 @@ const { title, description } = Astro.props
 
 	html {
 		font-family: 'Onest Variable', system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	body {
@@ -45,5 +48,11 @@ const { title, description } = Astro.props
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>
