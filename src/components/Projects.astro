@@ -1,0 +1,33 @@
+---
+const PROJECTS = [
+    {
+        title: "Bethany's Pie Shop",
+        description: "Sitio web de una tienda de tartas y pasteles, con carrito de compras y formulario de contacto.",
+        link: 'https://pieshopdemo.com/',
+        github: 'https://github.com/ivansteb/',
+        image: "/images/bethanypieshop.png",
+        tags: ["React", "TailwindCSS", "Astro"]
+    }
+]
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image }) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {
+                    tags.map(tag => (
+                        <li>{tag}</li>
+                    ))
+                }
+            </ul>
+            <img 
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${title}`}
+                class="rounded shadow-xl shadow-white/10"
+            />
+        </article>
+    ))
+}
