@@ -1,7 +1,7 @@
 ---
 import React from './icons/tech/React.astro';
 import Tailwind from './icons/tech/Tailwind.astro';
-import Astro from './icons/tech/AstroIcon.astro';
+import AstroIcon from './icons/tech/AstroIcon.astro';
 import Javascript from './icons/tech/Javascript.astro';
 import CSharp from './icons/tech/CSharp.astro';
 
@@ -19,18 +19,18 @@ const TAGS = {
     ASTRO: {
         name: "Astro",
         class: "text-[#0d1117] bg-[#61dafb]",
-        icon: Astro,
+        icon: AstroIcon,
     },
-    JAVASCRIPT: {
-        name: "JavaScript",
-        class: "text-[#f7df1e] bg-[#0d1117]",
-        icon: Javascript,
-    },
-    CSHARP: {
-        name: "C#",
-        class: "text-[#239120] bg-[#0d1117]",
-        icon: CSharp,
-    }
+    // JAVASCRIPT: {
+    //     name: "JavaScript",
+    //     class: "text-[#f7df1e] bg-[#0d1117]",
+    //     icon: Javascript,
+    // },
+    // CSHARP: {
+    //     name: "C#",
+    //     class: "text-[#239120] bg-[#0d1117]",
+    //     icon: CSharp,
+    // }
 }
 
 const PROJECTS = [
@@ -40,7 +40,15 @@ const PROJECTS = [
         link: 'https://pieshopdemo.com/',
         github: 'https://github.com/ivansteb/',
         image: "/images/bethanypieshop.png",
-        tags: [TAGS.REACT, TAGS.TAILWINDCSS, TAGS.ASTRO]
+        tags: [TAGS.REACT, TAGS.TAILWINDCSS]
+    },
+    {
+        title: "Secondary School",
+        description: "Sitio web de una escuela secundaria, con información sobre la institución y formulario de contacto.",
+        link: 'https://secondaryschooldemo.com/',
+        github: '#',
+        image: "/images/secondaryschool.png",
+        tags: [TAGS.ASTRO, TAGS.TAILWINDCSS]
     }
 ]
 ---
@@ -52,10 +60,10 @@ const PROJECTS = [
             <p class="text-md mb-4 text-pretty">{description}</p>
             <ul>
                 {
-                    tags.map(({ icon: Icon, ...tag }) => (
+                    tags.map((tag) => (
                         <li>
-                            <span class={`flex rounded-full gap-x-2 text-xs ${tag.class}`}>
-                                <Icon class="size-6 inline-block mr-2" />
+                            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} p-2`}>
+                                <tag.icon class="size-6" />
                                 {tag.name}
                             </span>
                         </li>
