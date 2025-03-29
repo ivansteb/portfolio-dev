@@ -71,7 +71,9 @@ const PROJECTS = [
                     {
                         tags.map((tag) => (
                             <li>
-                            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
+                            <span 
+                                class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 items-center hover:brightness-150 hover:opacity-90 transition-all`}
+                            >
                                 <tag.icon class="size-6" />
                                 {tag.name}
                             </span>

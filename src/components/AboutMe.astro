@@ -1,0 +1,35 @@
+---
+const personalImageAlt = "picture of Iván" 
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-400 darK:text-gray-400 md:flex-row">
+    <div 
+        class="[&>p]:mb-4 [&>p>strong]:text-green-700 dark:[&>p>strong]:text-green-700/80 [&>p>strong]:font-normal [&>p>strong]:font-mono [&>p>strong]:hover:text-green-700 text-pretty order-2 md:order-1"
+    >
+        <p>
+            Me llamo Iván Agustín Ulises, nací en el año '93 en la ciudad de Santa Fe, Argentina.
+            Comencé en la programación como un juego a los 12 años, pero en el medio me dediqué a la construcción y la ingeniería civil.
+            A finales de 2023, me fui reencontrando con lo que había comenzado de pequeño y decidí enfocarme por completo en ello.
+        </p>
+        <p>
+            Actualmente soy desarrollador de software junior en Diveria S.R.L., trabajando con tecnologías como <strong>React</strong>, <strong>C# .NET</strong>, <strong>JavaScript</strong>, <strong>SQL Server</strong> y <strong>Git/GitLab</strong>, entre otras.
+        </p>
+        <p>
+            Mis próximos objetivos son reforzar los conocimientos actuales, ahondar en desarrollo de aplicaciones móviles y en tareas de DevOps, tales como <strong>CI/CD</strong>, <strong>Docker</strong> y <strong>Kubernetes</strong>.
+        </p>
+    </div>
+    <div class="relative w-64 h-64 aspect-square">
+        <img
+            src="/images/about/ivan01.webp"
+            alt={personalImageAlt}
+            class="absolute inset-0 object-cover w-full h-full p-1 md:order-2 rotate-2 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-green-500/5 ring-1 ring-black/70 dark:ring-white/20 transition-opacity duration-500 hover:opacity-0"
+            style="object-position: 50% 50%;"
+        />
+        <img
+            src="/images/about/ivan02.webp"
+            alt="picture at Bariloche, Argentina"
+            class="absolute inset-0 object-cover w-full h-full p-1 md:order-2 rotate-2 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-green-500/5 ring-1 ring-black/70 dark:ring-white/20 transition-opacity duration-500 opacity-0 hover:opacity-100"
+            style="object-position: 50% 50%;"
+        />
+    </div>
+</article>
