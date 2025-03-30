@@ -1,18 +1,20 @@
 ---
-import Badge from '../components/Badge.astro';
-import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import InstagramIcon from '../components/icons/Instagram.astro';
-import MailIcon from '../components/icons/Mail.astro';
-import BriefcaseIcon from '../components/icons/Briefcase.astro';
-import CodeIcon from '../components/icons/Code.astro';
-import ProfileIcon from '../components/icons/Profile.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import AboutMe from '../components/AboutMe.astro';
+import Layout from '@/layouts/Layout.astro';
+
+import AboutMe from '@/components/AboutMe.astro';
+import Badge from '@/components/Badge.astro';
+import BriefcaseIcon from '@/components/icons/Briefcase.astro';
+import CodeIcon from '@/components/icons/Code.astro';
+import Contact from '@/components/Contact.astro';
+import Experience from '@/components/Experience.astro';
+import GitHubIcon from '@/components/icons/GitHub.astro';
+import InstagramIcon from '@/components/icons/Instagram.astro';
+import LinkedInIcon from '@/components/icons/LinkedIn.astro';
+import MailIcon from '@/components/icons/Mail.astro';
+import ProfileIcon from '@/components/icons/Profile.astro';
+import Projects from '@/components/Projects.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import SocialPill from '@/components/SocialPill.astro';
 ---
 
 <Layout 
@@ -32,7 +34,7 @@ import AboutMe from '../components/AboutMe.astro';
 			</h1>
 			<h2 class="text-xl opacity-80 text-wrap max-w-[700px]">
 				<span>+6 meses de experiencia. </span><span class="text-green-400/80">Desarrollador Jr. de Software e Ingeniero civil.</span>
-				<span class="text-green-300/90">De Santa Fe, Argentina ⚽. </span><span class="opacity-70">Investigando y siendo curioso la mayor parte del tiempo.</span>
+				<span class="text-green-300/90">De Santa Fe, Argentina. </span><span class="opacity-70">Investigando y siendo curioso la mayor parte del tiempo.</span>
 			</h2>
 
 			<nav class="flex gap-4 mt-6 flex-wrap">
@@ -77,6 +79,14 @@ import AboutMe from '../components/AboutMe.astro';
 				Sobre mí
 			</h2>
 			<AboutMe />
+		</SectionContainer>
+
+		<SectionContainer id="contact">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
+				<MailIcon class="size-6" />
+				Contacto
+			</h2>
+			<Contact />
 		</SectionContainer>
 	</main>
 </Layout>
