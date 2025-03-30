@@ -1,3 +1,12 @@
+---
+const navItems = [
+    { name: 'Sobre mí', href: '/#about', label: 'about' },
+    { name: 'Experiencia', href: '/#experience', label: 'experience' },
+    { name: 'Proyectos', href: '/#projects', label: 'projects' },
+    { name: 'Contacto', href: '/#contact', label: 'contact' },
+]
+---
+
 <header class="flex justify-between items-center px-4 py-6 w-full lg:w-[900px] mx-auto">
     <img 
         src="/images/ivan-photo.jpg" 
@@ -6,21 +15,16 @@
     />
 
     <nav class="flex flex-row gap-x-2 opacity-80">
-        <a 
-            class="hover:bg-white/10 rounded-full px-3 py-1 transition"
-            href="/#about">Sobre mí
-        </a>
-        <a 
-            class="hover:bg-white/10 rounded-full px-3 py-1 transition"
-            href="/#experience">Experiencia
-        </a>
-        <a 
-            class="hover:bg-white/10 rounded-full px-3 py-1 transition"
-            href="/#projects">Proyectos
-        </a>
-        <a 
-            class="hover:bg-white/10 rounded-full px-3 py-1 transition"
-            href="/#contact">Contacto
-        </a>
+        {
+            navItems.map((link) => (
+                <a
+                    href={link.href}
+                    aria-label={link.label}
+                    class="hover:bg-white/10 rounded-full px-3 py-1 transition"
+                >
+                    {link.name}
+                </a>
+            ))
+        }
     </nav>
 </header>
